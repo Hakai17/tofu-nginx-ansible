@@ -1,0 +1,9 @@
+---
+- name: Install NGINX
+  hosts: all
+  remote_user: ubuntu
+  become: yes
+  tasks:
+    - name: Include NGINX role
+      include_role:
+        name: nginxinc.nginx
